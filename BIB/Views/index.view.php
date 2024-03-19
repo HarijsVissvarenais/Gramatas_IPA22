@@ -2,24 +2,35 @@
 $headtitle = "Books";
 require "components/header.php" ?>
 <?php require "components/navbar.php" ?>
-
+<div id="center">
+    <div id="box">
 <ol>
-<?php foreach($books as $book) { ?>
-<li> <?= $book["title"] ?></li>
-<?php } ?>
 
 
 
 </ol>
 
-<form >
-<input  name='id' />
-<button class='lol'>FilterbyID</button>
-</form>
-<form >
-<input  name='name' value='<?=($_GET["name"] ?? null) ?> ' placeholder="Ievadi ID"></input>
-<button class='lol'>FilterByCategory</button>
-</form>
+
+<button data-kast-target="#kast">Ienakt!</button>
+
+
 </div>
+
+
+<div class="kast" id="kast">
+    <div id="kast-head">
+        <h1>Sveiks lasitaj!</h1>
+        <button data-close-button class="close">&times;</button>
+    </div>
+    <div id="kast-body">
+        <div id="signUp-container"><button>Sign-Up</button></div>
+        <div id="login-container"><button>Login</button></div>
+    </div>
+
+
+ 
 </div>
+
+</div>
+<div id="overlay">    </div>
 <?php require "components/footer.php" ?>

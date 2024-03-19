@@ -1,0 +1,104 @@
+body {
+background-color: lightblue;
+
+}
+#center {
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#box {
+    border: 5px solid rgb(215, 99, 99);
+    border-radius: 6px;
+    padding: 30px;
+}
+button[data-kast-target]{
+    background-color: blue;
+    border-radius: 6px;
+    border:none;
+    color:white;
+    width:100px;
+    height:30px;
+}
+button[data-kast-target]:hover {
+    background-color: rgb(0, 76, 255);
+}
+button[data-kast-target]:checked {
+    background-color: rgb(0, 179, 255);
+}
+
+#kast {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: bisque;
+    width: 500px;
+    max-width:80%;
+}
+#kast.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+#kast-head {
+    padding: 10px 15px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+#kast-head h1 {
+    font-size: 1.25rem;
+    font-weight: bolder;
+}
+#kast-head .close {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size:1.25rem;
+    font-weight: bold;
+}
+#kast-body {
+    padding: 10px 15px;
+    display:flex;
+    
+}
+#kast-body #signUp-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#kast-body #signUp-container button{
+    background-color: rgb(34, 34, 138);
+    border-radius: 6px;
+    border:none;
+    color:white;
+    width: 110px;
+    height: 36px;
+ 
+}
+#kast-body #login-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events:none;
+}
+#overlay.active {
+    opacity:1;
+    pointer-events: all;
+}
